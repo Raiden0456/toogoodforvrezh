@@ -19,7 +19,7 @@ services:
       - METRICS_PORT=8000                             ## Port for metrics http server
       - DISABLE_TESTS=false                           ## true to disable test notifications on startup
       - QUIET=false                                   ## true to disable all console messages. Only errors and console notifier messages
-      - LOCALE=es_EU                                  ## set locale to localize ${{pickupdate}}
+      - LOCALE=${LOCALE}                                  ## set locale to localize ${{pickupdate}}
 
       - APPRISE=false                                 ## true = enable notifications via Apprise
       - APPRISE_URL=                                  ## Apprise URL
@@ -54,8 +54,8 @@ services:
       #- PUSH_SAFER_CRON=
 
       - TELEGRAM=true                                ## true = enable notifications via Telegram
-      - TELEGRAM_TOKEN=6175919857:AAHu8fzFYiW142_okk44nMwCJ90Uk3nI9v4   ## Telegram Bot token - see @botfather
-      - TELEGRAM_CHAT_IDS=438060773                           ## Telegram Chat id, multiple ids separated by comma
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}  ## Telegram Bot token - see @botfather
+      - TELEGRAM_CHAT_IDS=${TELEGRAM_CHAT_IDS}                           ## Telegram Chat id, multiple ids separated by comma
       - TELEGRAM_TIMEOUT=60                           ## Timeout for Telegram API requests
       #- TELEGRAM_CRON=
       - 'TELEGRAM_BODY=*$${{display_name}}*\n*Available*: $${{items_available}}\n*Rating*: $${{rating}}\n*Price*: $${{price}} $${{currency}}\n*Pickup*: $${{pickupdate}}'
