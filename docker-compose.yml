@@ -58,8 +58,7 @@ services:
       - TELEGRAM_CHAT_IDS=${TELEGRAM_CHAT_IDS}                           ## Telegram Chat id, multiple ids separated by comma
       - TELEGRAM_TIMEOUT=60                           ## Timeout for Telegram API requests
       #- TELEGRAM_CRON=
-      - 'TELEGRAM_BODY=*$${{display_name}}*\n*Available*: $${{items_available}}\n*Rating*: $${{rating}}\n*Price*: $${{price}} $${{currency}}\n*Pickup*: $${{pickupdate}}'
-      ## Optional message body as markdown, variables as described below
+      - 'TELEGRAM_BODY=<img src="$${{item_logo}}"alt="Logo"/>\n*$${{display_name}}*\n*Available*: $${{items_available}}\n*Rating*: $${{rating}}\n*Price*: $${{price}} $${{currency}}\n*Pickup*: $${{pickupdate}}\n*Scanned on*: $${{scanned_on}}' ## Optional message body as markdown, variables as described below
                                                       ## Example:
                                                       ## 'TELEGRAM_BODY=*$${{display_name}}*\n*Available*: $${{items_available}}\n*Rating*: $${{rating}}\n*Price*: $${{price}} $${{currency}}\n*Pickup*: $${{pickupdate}}'
                                                       ## In some cases you may have to add
