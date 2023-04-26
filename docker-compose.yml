@@ -4,7 +4,7 @@ services:
     image: derhenning/tgtg:latest         ## pre build image from docker hub
     #image: tgtg-scanner:latest           ## locally build image
     environment:
-      - TZ=Europe/Spain                              ## Set timezone for pickupdate, otherwise will be utc
+      - TZ=Europe/Madrid                          ## Set timezone for pickupdate, otherwise will be utc
       - DEBUG=false                                   ## true for debug log messages
       - TGTG_USERNAME=vrezhraiden@gmail.com                                ## TGTG Username / Login EMail
       - SLEEP_TIME=60                                 ## Time to wait till next scan in seconds - default 60 seconds
@@ -19,7 +19,7 @@ services:
       - METRICS_PORT=8000                             ## Port for metrics http server
       - DISABLE_TESTS=false                           ## true to disable test notifications on startup
       - QUIET=false                                   ## true to disable all console messages. Only errors and console notifier messages
-      - LOCALE=${LOCALE}                                  ## set locale to localize ${{pickupdate}}
+      - LOCALE=en_US                                  ## set locale to localize ${{pickupdate}}
 
       - APPRISE=false                                 ## true = enable notifications via Apprise
       - APPRISE_URL=                                  ## Apprise URL
