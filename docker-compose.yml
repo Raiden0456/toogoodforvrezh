@@ -4,9 +4,9 @@ services:
     image: derhenning/tgtg:latest         ## pre build image from docker hub
     #image: tgtg-scanner:latest           ## locally build image
     environment:
-      - TZ=Europe/Berlin                              ## Set timezone for pickupdate, otherwise will be utc
+      - TZ=Europe/Spain                              ## Set timezone for pickupdate, otherwise will be utc
       - DEBUG=false                                   ## true for debug log messages
-      - TGTG_USERNAME=                                ## TGTG Username / Login EMail
+      - TGTG_USERNAME=vrezhraiden@gmail.com                                ## TGTG Username / Login EMail
       - SLEEP_TIME=60                                 ## Time to wait till next scan in seconds - default 60 seconds
       #- SCHEDULE_CRON=                               ## (optional) Scheduler in cron schedule expression
                                                       ## Example of cron schedule expression:
@@ -53,9 +53,9 @@ services:
       - PUSH_SAFER_DEVICE_ID=
       #- PUSH_SAFER_CRON=
 
-      - TELEGRAM=false                                ## true = enable notifications via Telegram
-      - TELEGRAM_TOKEN=                               ## Telegram Bot token - see @botfather
-      - TELEGRAM_CHAT_IDS=                            ## Telegram Chat id, multiple ids separated by comma
+      - TELEGRAM=true                                ## true = enable notifications via Telegram
+      - TELEGRAM_TOKEN=6175919857:AAHu8fzFYiW142_okk44nMwCJ90Uk3nI9v4   ## Telegram Bot token - see @botfather
+      - TELEGRAM_CHAT_IDS= 438060773                           ## Telegram Chat id, multiple ids separated by comma
       - TELEGRAM_TIMEOUT=60                           ## Timeout for Telegram API requests
       #- TELEGRAM_CRON=
       #- TELEGRAM_BODY=                               ## Optional message body as markdown, variables as described below
